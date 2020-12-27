@@ -21,7 +21,9 @@ client.on('message', msg => {
         // msg.react('❤️');
         msg.channel.send('❤️');
     }
-
+    if (msg.content === '!ping') {
+        msg.channel.send('PONG BLEAT!')
+    }
     if (msg.content === `${BOT_PREFIX}${MOD_ME_COMMAND}`) {
         // msg.channel.send('PONG BLEAT!')
         // msg.member.roles.add('792749590273196072')
