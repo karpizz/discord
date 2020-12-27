@@ -23,7 +23,7 @@ client.on('message', msg => {
     }
     if (msg.content === '!time') {
         // msg.react('❤️');
-        msg.channel.send(Date.now());
+        msg.channel.send(getDate());
     }
     if (msg.content === '!ping') {
         msg.channel.send('PONG BLEAT!')
