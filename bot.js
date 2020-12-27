@@ -19,10 +19,10 @@ client.on('ready', () => {
 client.on('messageDelete', msg => {
     msg.channel.send('Stop deleting sk blt!');
 })
-const rnd = Math.floor(Math.random() * 2000);
-const ats = ['Pong yopta!', '💩😁💩', `Your ping is: ${rnd}ms!`, '✌🖕✌']
 client.on('message', msg => {
+    const rnd1 = Math.floor(Math.random() * 2000);
     const rnd = Math.floor(Math.random() * ats.length);
+    const ats = ['Pong yopta!', '💩😁💩', `Your ping is: ${rnd1}ms!`, '✌🖕✌']
     if (msg.content === '!love') {
         // msg.react('❤️');
         msg.channel.send('❤️');
