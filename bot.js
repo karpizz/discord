@@ -9,14 +9,19 @@ const BOT_PREFIX = '!';
 const MOD_ME_COMMAND = 'mode-me';
 
 client.on('ready', () => {
+    console.log('Bot is ready to go 💚');
+})
+
+client.on('ready', () => {
     console.log('Bot is ready to go');
 })
 
 client.on('messageDelete', msg => {
     msg.channel.send('Stop deleting sk blt!');
 })
-
+const ats = ['Pong yopta!', '💩💩💩', 'Your ping is: 1154ms! Stop downloading P*rn', '✌✌✌']
 client.on('message', msg => {
+    const rnd = Math.floor(Math.random() * ats.length);
     if (msg.content === '!love') {
         // msg.react('❤️');
         msg.channel.send('❤️');
@@ -25,7 +30,7 @@ client.on('message', msg => {
         msg.channel.send('792772003303522316');
     }
     if (msg.content === '!ping') {
-        msg.channel.send('PONG BLEAT!')
+        msg.channel.send(ats[rnd])
     }
     if (msg.content === `${BOT_PREFIX}${MOD_ME_COMMAND}`) {
         // msg.channel.send('PONG BLEAT!')
