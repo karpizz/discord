@@ -22,7 +22,7 @@ client.on('message', msg => {
         msg.channel.send('❤️');
     }
     if (msg.content === '!time') {
-        msg.channel.send(getFullYear().getMonth().getDate());
+        msg.channel.send('792772003303522316');
     }
     if (msg.content === '!ping') {
         msg.channel.send('PONG BLEAT!')
